@@ -48,7 +48,7 @@ const handleSubmit = () => {
         <input type="submit" value="Add to waiting list" />
       </form>
     </section>
-    <section>
+    <section class="waitingList">
       <h1>Waiting list</h1>
       <p v-if="userWaiting.length === 0">Nobody on the list, yet !!!</p>
       <div v-else>
@@ -64,15 +64,15 @@ const handleSubmit = () => {
 
 <style scoped>
 main {
-  height: calc(100vh - 60);
-  width: 100vh;
+  border: 1px red solid;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
 }
 
 .form {
   border: 1px green solid;
-  height: 100%;
-  width: 100%;
+  width: 50%;
 }
 
 form {
@@ -82,5 +82,20 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+
+.waitingList {
+  border: 1px solid red;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 35px;
 }
 </style>

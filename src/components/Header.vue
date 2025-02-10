@@ -26,4 +26,11 @@ nav {
   gap: 20px;
   padding: 20px;
 }
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+}
 </style>
