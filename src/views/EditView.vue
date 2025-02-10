@@ -4,10 +4,10 @@ import { useRouter } from 'vue-router'
 
 const GlobalStore = inject('GlobalStore')
 
-const firstname = ref('')
-const lastname = ref('')
-const age = ref('')
-const job = ref('')
+const firstname = ref(GlobalStore.user.value.firstname)
+const lastname = ref(GlobalStore.user.value.lastname)
+const age = ref(GlobalStore.user.value.age)
+const job = ref(GlobalStore.user.value.job)
 
 const handleSubmit = () => {
   console.log({

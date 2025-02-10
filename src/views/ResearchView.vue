@@ -8,7 +8,10 @@ const result = ref(null)
 
 const handleSubmit = () => {
   const personFound = personsList.find((person) => {
-    return personSearched.value.toLowerCase() === person.firstname.toLowerCase()
+    return (
+      personSearched.value.toLowerCase() === person.firstname.toLowerCase() ||
+      personSearched.value.toLowerCase() === person.lastname.toLowerCase()
+    )
   })
   result.value = personFound
 }
